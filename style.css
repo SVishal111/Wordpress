@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+:root {
+    --green: #27ae60;
+    --black: #444;
+    --light-color: #777;
+    --bg-color: #e6e6e6;
+    --copyright-bg-color: #cccccc;
+    --border: 1.6px solid rgba(0,0,0,.2);
+    --box-shadow: 6px 6px 14px #ccc,
+                 -6px -6px 14px #fff;
+    --box-shadow-inset: 6px 6px 14px #ccc inset,
+                 -6px -6px 14px #fff inset;
+    --icon-color: #e6e6e6;
+    --icon-color-hover: #e6e6e6;
+}
+
+body {
+    background: var(--bg-color);
+}
+
+body.active {
+    --black: #fff;
+    --light-color: #ddd;
+    --bg-color: #222;
+    --copyright-bg-color: #2e2e2e;
+    --border: 1.6px solid rgba(0,0,0,.4);
+    --box-shadow: 6px 6px 14px #111,
+                 -6px -6px 14px #333;
+    --box-shadow-inset: 6px 6px 14px #111 inset,
+                 -6px -6px 14px #333 inset;
+    --icon-color: #222;
+    --icon-color-hover: #222;
+}
+
+#theme-toggler {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    color: var(--black);
+    background: var(--bg-color);
+}
+
+#theme-toggler:hover {
+    color: var(--green);
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+section {
+    /* min-height: 100vh; */
+    padding: 32px;
+}
+
+.heroSection {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    min-height: 100vh;
+}
+
+.heroSection .intro h3 {
+    font-size: 60px;
+    color: var(--black);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.heroSection .intro p {
+    font-size: 20px;
+    color: var(--green);
+    padding-bottom: 8px;
+}
+
+.btn {
+    border: none;
+    background-color: var(--bg-color);
+}
+
+.heroSection .intro .btn {
+    height: 45px;
+    width: 190px;
+    box-shadow: var(--box-shadow);
+    margin-top: 13px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: none;
+}
+
+.heroSection .intro .btn a {
+    display: block;
+    font-size: 20px;
+    color: var(--black);
+}
+
+.heroSection .intro .btn:hover {
+    box-shadow: var(--box-shadow-inset);
+}
+
+.heroSection .intro .btn:hover a {
+    color: var(--green);
+}
+
+.heroSection .smIcons {
+    margin-top: 100px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    padding: 12px;
+}
+
+.heroSection .smIcons a {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    box-shadow: var(--box-shadow);
+    margin: 8px;
+    font-size: 20px;
+    color: var(--black);
+    border-radius: 8px;
+    background: var(--bg-color);
+}
+
+.heroSection .smIcons a:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green);
+}
+
+.aboutContainer {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.aboutWP .heading{
+    text-align: center;
+    font-size: 35px;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.aboutWP .heading span {
+    color: var(--green);
+}
+
+.listContainer {
+    height: auto;
+    width: 775px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
+    margin-top: 23px;
+}
+
+.detailList li {
+    list-style-type: none;
+    line-height: 2;
+    margin: 3px;
+}
+
+.detailList li a {
+    text-decoration: none;
+    color: var(--black);
+
+    display: flex;
+    align-items: center;
+}
+
+.detailList li a p {
+    margin: 8px;
+    padding: 8px 20px;
+
+    font-weight: 500;
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+}
+
+.detailList li a p:hover {
+    box-shadow: var(--box-shadow-inset);
+    color: var(--green);
+}
+
+.detailList .liLeft {
+    margin-left: 75px;
+}
+
+.copyrights {
+    background-color: var(--copyright-bg-color);
+    padding: 8px;
+}
+
+.copyrights p {
+    padding: 5px;
+    text-align: center;
+    color: var(--black);
+}
+
+.copyrights p span {
+    color: var(--green);
+}
+
+@media (max-width:450px){
+    section {
+        padding: 10px;
+    }
+}
+
+@media (max-width:420px) {
+    * {
+        font-size: 98%;
+    }
+
+    .heroSection .intro h3 {
+        font-size: 40px;
+    }
+
+    .detailList .liLeft {
+        margin-left: 40px;
+    }
+
+}
+
+@media (max-width:330px) {
+    .detailList .liLeft {
+        margin-left: 20px;
+    }
+}
